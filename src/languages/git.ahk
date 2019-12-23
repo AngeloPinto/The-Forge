@@ -2,7 +2,22 @@
 ; CODES GIT
 ;-------------------
 
+; --------------------------------------------- 
+; GIT INIT
+; ---------------------------------------------
 
+::gitinit::
+    Gosub, git_init_sub
+Return
+
+::giti::
+    Gosub, git_init_sub
+Return
+
+git_status_sub:
+    Sleep, 100
+    Send, git init
+Return
 
 ; --------------------------------------------- 
 ; GIT STATUS 
