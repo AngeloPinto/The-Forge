@@ -117,7 +117,6 @@ git_log_pretty_format_sub:
 Return
 
 
-
 ; --------------------------------------------- 
 ; GIT COMMIT 
 ; ---------------------------------------------
@@ -393,3 +392,30 @@ git_config_end_line_2_sub:
     Sleep, 100
     Send, git config --global core.safecrlf warn
 Return
+
+
+; --------------------------------------------- 
+; GIT ALIAS
+; ---------------------------------------------
+
+::gitalias::
+    Gosub, git_alias_sub
+Return
+
+::gital::
+    Gosub, git_alias_sub
+Return
+
+git_alias_sub:
+
+    Sleep, 100
+
+    InputBox, sAlias, Git Alias, Type the alias,,,,,,,, st status
+    if ErrorLevel
+        Return
+
+    Send, git config --global alias.%sAlias%
+
+Return
+
+
