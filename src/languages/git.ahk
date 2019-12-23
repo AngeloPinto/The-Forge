@@ -136,7 +136,7 @@ Return
 git_commit_sub:
     Sleep, 100
 
-    InputBox, sText, Git Commit, Type the text of commit,,,,,,,, text_commit
+    InputBox, sText, Git Commit, Type the text of commit,,,,,,,, commit_text
     if ErrorLevel
         Return
 
@@ -144,6 +144,35 @@ git_commit_sub:
 Return
 
 
+; --------------------------------------------- 
+; GIT COMMIT --AMEND
+; ---------------------------------------------
+
+::gitcommitammend::
+    Gosub, git_commit_ammend_sub
+Return
+
+::gitcommita::
+    Gosub, git_commit_ammend_sub
+Return
+
+::gitcoma::
+    Gosub, git_commit_ammend_sub
+Return
+
+::gitca::
+    Gosub, git_commit_ammend_sub
+Return
+
+git_commit_ammend_sub:
+    Sleep, 100
+
+    InputBox, sText, Git Commit Ammend, Type the text of commit,,,,,,,, commit_text
+    if ErrorLevel
+        Return
+
+    Send, git commit --amend -m "%sText%"
+Return
 
 
 ; --------------------------------------------- 
@@ -241,6 +270,33 @@ Return
 
 
 ; --------------------------------------------- 
+; GIT MOVE
+; ---------------------------------------------
+
+::gitmove::
+    Gosub, git_move_sub
+Return
+
+::gitmv::
+    Gosub, git_move_sub
+Return
+
+git_move_sub:
+    Sleep, 100
+
+    InputBox, sFileName, Git Move, Type the File Name,,,,,,,, file.ext
+    if ErrorLevel
+        Return
+
+    InputBox, sDir, Git Move, Type the Directory Name,,,,,,,, dir_name
+    if ErrorLevel
+        Return
+
+    Send, git mv %sFileName% %sDir%
+Return
+
+
+; --------------------------------------------- 
 ; GIT REBASE
 ; ---------------------------------------------
 
@@ -279,6 +335,30 @@ git_reset_sub:
     Sleep, 100
     Send, git reset
 Return
+
+
+; --------------------------------------------- 
+; GIT RESET -- HARD - HASH
+; ---------------------------------------------
+
+::gitresethard::
+    Gosub, git_reset_hard_sub
+Return
+
+::gitrsh::
+    Gosub, git_reset_hard_sub
+Return
+
+git_reset_hard_sub:
+    Sleep, 100
+    
+    InputBox, sTagName, Git Reset Hard, Type the Tag Name,,,,,,,, tag_name
+    if ErrorLevel
+        Return    
+
+    Send, git reset --hard %sTagName%
+Return
+
 
 
 ; --------------------------------------------- 
@@ -442,6 +522,34 @@ git_tag_sub:
 
 Return
 
+
+; --------------------------------------------- 
+; GIT TAG -- DELETE
+; ---------------------------------------------
+
+::gittagdelete::
+    Gosub, git_tag_delete_sub
+Return
+
+::gittagdel::
+    Gosub, git_tag_delete_sub
+Return
+
+::gittd::
+    Gosub, git_tag_delete_sub
+Return
+
+git_tag_delete_sub:
+
+    Sleep, 100
+
+    InputBox, sTag, Git Tag Delete, Type the Tag Name to delete,,,,,,,, tag_name
+    if ErrorLevel
+        Return
+
+    Send, git tag -d %sTag%
+
+Return
 
 
 ; --------------------------------------------- 
