@@ -19,6 +19,31 @@ git_init_sub:
     Send, git init
 Return
 
+
+; --------------------------------------------- 
+; GIT CLONE
+; ---------------------------------------------
+
+::gitclone::
+    Gosub, git_clone_sub
+Return
+
+::gitcl::
+    Gosub, git_clone_sub
+Return
+
+git_clone_sub:
+    Sleep, 100
+
+    Sleep, 100
+
+    InputBox, sText, Git Clone, Type the Remote Git Repository,,,,,,,, git_repository
+    if ErrorLevel
+        Return
+
+    Send, git clone %sText%
+Return
+
 ; --------------------------------------------- 
 ; GIT STATUS 
 ; ---------------------------------------------
