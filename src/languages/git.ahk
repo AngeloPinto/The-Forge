@@ -95,6 +95,28 @@ git_log_pretty_sub:
 Return
 
 
+; --------------------------------------------- 
+; GIT LOG -- PRETTY -- FORMAT
+; ---------------------------------------------
+
+::gitlogprettyformat::
+    Gosub, git_log_pretty_format_sub
+Return
+
+::gitlogpf::
+    Gosub, git_log_pretty_format_sub
+Return
+
+::gitlpf::
+    Gosub, git_log_pretty_format_sub
+Return
+
+git_log_pretty_format_sub:
+    Sleep, 100
+    Send, git log --pretty=format:"`%h `%ad | `%s`%d [`%an]" --graph --date=short
+Return
+
+
 
 ; --------------------------------------------- 
 ; GIT COMMIT 
