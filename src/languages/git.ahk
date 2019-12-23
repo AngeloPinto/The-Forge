@@ -14,7 +14,7 @@ Return
     Gosub, git_init_sub
 Return
 
-git_status_sub:
+git_init_sub:
     Sleep, 100
     Send, git init
 Return
@@ -75,6 +75,25 @@ git_log_sub:
     Sleep, 100
     Send, git log
 Return
+
+
+; --------------------------------------------- 
+; GIT LOG -- PRETTY
+; ---------------------------------------------
+
+::gitlogpretty::
+    Gosub, git_log_pretty_sub
+Return
+
+::gitlp::
+    Gosub, git_log_pretty_sub
+Return
+
+git_log_pretty_sub:
+    Sleep, 100
+    Send, git log --pretty=oneline
+Return
+
 
 
 ; --------------------------------------------- 
