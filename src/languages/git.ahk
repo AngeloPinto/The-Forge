@@ -418,4 +418,80 @@ git_alias_sub:
 
 Return
 
+; --------------------------------------------- 
+; GIT TAG
+; ---------------------------------------------
 
+::gittag::
+    Gosub, git_tag_sub
+Return
+
+::gitt::
+    Gosub, git_tag_sub
+Return
+
+git_tag_sub:
+
+    Sleep, 100
+
+    InputBox, sTag, Git Tag, Type the Tag Name,,,,,,,, tag_name
+    if ErrorLevel
+        Return
+
+    Send, git tag %sTag%
+
+Return
+
+
+
+; --------------------------------------------- 
+; GIT REVERT
+; ---------------------------------------------
+
+::gitrevert::
+    Gosub, git_revert_sub
+Return
+
+::gitrv::
+    Gosub, git_revert_sub
+Return
+
+git_revert_sub:
+
+    Sleep, 100
+
+    InputBox, sHash, Git Revert, Type the Hash,,,,,,,, HEAD
+    if ErrorLevel
+        Return
+
+    Send, git revert %sHash%
+
+Return
+
+; --------------------------------------------- 
+; GIT REVERT - NO EDIT
+; ---------------------------------------------
+
+::gitrevertnoedit::
+    Gosub, git_revert_no_edit_sub
+Return
+
+::gitrvne::
+    Gosub, git_revert_no_edit_sub
+Return
+
+::gitrvnoedit::
+    Gosub, git_revert_no_edit_sub
+Return
+
+git_revert_no_edit_sub:
+
+    Sleep, 100
+
+    InputBox, sHash, Git Revert, Type the Hash,,,,,,,, HEAD
+    if ErrorLevel
+        Return
+
+    Send, git revert %sHash% --no-edit
+
+Return
