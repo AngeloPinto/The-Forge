@@ -451,11 +451,8 @@ Return
 ; GIT END LINE 1
 ; ---------------------------------------------
 
-::gitline1::
-    Gosub, git_config_end_line_1_sub
-Return
 
-::gitel1::
+::gitconfigendline1::
     Gosub, git_config_end_line_1_sub
 Return
 
@@ -463,7 +460,11 @@ Return
     Gosub, git_config_end_line_1_sub
 Return
 
-::gitconfigendline1::
+::gitline1::
+    Gosub, git_config_end_line_1_sub
+Return
+
+::gitel1::
     Gosub, git_config_end_line_1_sub
 Return
 
@@ -477,11 +478,7 @@ Return
 ; GIT END LINE 2
 ; ---------------------------------------------
 
-::gitline2::
-    Gosub, git_config_end_line_2_sub
-Return
-
-::gitel2::
+::gitconfigendline2::
     Gosub, git_config_end_line_2_sub
 Return
 
@@ -489,7 +486,11 @@ Return
     Gosub, git_config_end_line_2_sub
 Return
 
-::gitconfigendline2::
+::gitline2::
+    Gosub, git_config_end_line_2_sub
+Return
+
+::gitel2::
     Gosub, git_config_end_line_2_sub
 Return
 
