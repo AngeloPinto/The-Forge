@@ -2,21 +2,21 @@
 
 ![The Forge](./img/thor-hammer_128x128.png)
 
-**The Forge** é um aplicativo desenvolvido em [AutoHotkey](https://www.autohotkey.com) que tem como objetivo auxiliar desenvolvedores, com diversas ferramentas, a forjar seus softwares.
+**The Forge** Ã© um aplicativo desenvolvido em [AutoHotkey](https://www.autohotkey.com) que tem como objetivo auxiliar desenvolvedores, com diversas ferramentas, a forjar seus softwares.
 
 <br>
 
 ## Experimente
 
-1. Abra seu editor código: _VSCODE_, _ATOM_, _SUBLIME_, _NOTEPAD++_ ou qualquer outro.
+1. Abra seu editor cÃ³digo: _VSCODE_, _ATOM_, _SUBLIME_, _NOTEPAD++_ ou qualquer outro.
 
-2. <kbd>VBAIF</kbd> - Digite o comando e pressione <kbd>Espaço</kbd> ou <kbd>Enter</kbd>
+2. <kbd>VBAIF</kbd> - Digite o comando e pressione <kbd>EspaÃ§o</kbd> ou <kbd>Enter</kbd>
 
 3. <kbd>DELPHICASE</kbd> - Digite o comando e informe na caixa de texto: <kbd>3</kbd>
 
-4. <kbd>GITCA</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>Espaço</kbd>
+4. <kbd>GITCA</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>EspaÃ§o</kbd>
 
-5. <kbd>ORAPACKAGE</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>Espaço</kbd>
+5. <kbd>ORAPACKAGE</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>EspaÃ§o</kbd>
 
 <br>
 
@@ -64,9 +64,9 @@ COMMAND                        | ACTION
 <kbd>gitl</kbd>                |  `git log`
 <kbd>gitlogpretty</kbd>        |  `git log --pretty=oneline`
 <kbd>gitlp</kbd>               |  `git log --pretty=oneline`
-<kbd>gitlogprettyformat</kbd>  |  `git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short`
-<kbd>gitlogpf</kbd>            |  `git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short`
-<kbd>gitlpf</kbd>              |  `git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short`
+<kbd>gitlogprettyformat</kbd>  |  ``git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short``
+<kbd>gitlogpf</kbd>            |  ``git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short``
+<kbd>gitlpf</kbd>              |  ``git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short``
 <kbd>gitmove</kbd>             |  `git mv file.ext dir_name`
 <kbd>gitmv</kbd>               |  `git mv file.ext dir_name`
 <kbd>gitmv</kbd>               |  `git mv file.ext dir_name`
