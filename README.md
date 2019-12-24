@@ -69,7 +69,6 @@ COMMAND                        | ACTION
 <kbd>gitlpf</kbd>              |  `git log --pretty=format:"%h %ad \| %s%d [%an]" --graph --date=short`
 <kbd>gitmove</kbd>             |  `git mv file.ext dir_name`
 <kbd>gitmv</kbd>               |  `git mv file.ext dir_name`
-<kbd>gitmv</kbd>               |  `git mv file.ext dir_name`
 <kbd>gitpull</kbd>             |  `git pull origin master`
 <kbd>gitu</kbd>                |  `git pull origin master`
 <kbd>gitpush</kbd>             |  `git push origin master`
@@ -95,6 +94,6 @@ COMMAND                        | ACTION
 <kbd>gittagdel</kbd>           |  `git tag -d tag_name`
 <kbd>gittd</kbd>               |  `git tag -d tag_name`
 
-
+<br>
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
