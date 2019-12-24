@@ -64,9 +64,9 @@ COMMAND                        | ACTION
 <kbd>gitl</kbd>                |  `git log`
 <kbd>gitlogpretty</kbd>        |  `git log --pretty=oneline`
 <kbd>gitlp</kbd>               |  `git log --pretty=oneline`
-<kbd>gitlogprettyformat</kbd>  |  ```git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short```
-<kbd>gitlogpf</kbd>            |  ```git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short```
-<kbd>gitlpf</kbd>              |  ```git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short```
+<kbd>gitlogprettyformat</kbd>  |  `git log --pretty=format:"%h %ad \| %s%d [%an]" --graph --date=short`
+<kbd>gitlogpf</kbd>            |  `git log --pretty=format:"%h %ad \| %s%d [%an]" --graph --date=short`
+<kbd>gitlpf</kbd>              |  `git log --pretty=format:"%h %ad \| %s%d [%an]" --graph --date=short`
 <kbd>gitmove</kbd>             |  `git mv file.ext dir_name`
 <kbd>gitmv</kbd>               |  `git mv file.ext dir_name`
 <kbd>gitmv</kbd>               |  `git mv file.ext dir_name`
