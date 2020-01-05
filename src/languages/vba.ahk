@@ -137,10 +137,10 @@ vba_for_sub:
         Return    
 ;    if (%var_ini% > %var_fim%)
 ;    {
-        Send, For %variavel% = %var_ini% To %var_fim% {enter}
+        Send, For %variavel% = %var_ini% To %var_fim%{enter}
         Send, {tab}{enter}
-        Send, +{tab}Next %variavel% {enter}
-        Send, {up}{up}{end}
+        Send, +{tab}Next %variavel%
+        Send, {up}{end}
 ;    }
 Return
 
@@ -162,10 +162,10 @@ vba_for_sub2:
         Return    
 ;    if (%var_ini% < %var_fim%)
 ;    {
-        Send, For %variavel% = %var_ini% To %var_fim% Step -1 {enter}
+        Send, For %variavel% = %var_ini% To %var_fim% Step -1{enter}
         Send, {tab}{enter}
-        Send, +{tab}Next %variavel% {enter}
-        Send, {up}{up}{end}
+        Send, +{tab}Next %variavel%
+        Send, {up}{end}
 ;    }
 Return
 
@@ -182,10 +182,10 @@ vba_for_sub3:
     InputBox, var_ini, VBA - FOR Last Cell, Digite o valor inicial,,,,,,,, 1
     if ErrorLevel
         Return    
-    Send, for %variavel% = %var_ini% To Cells.SpecialCells(xlCellTypeLastCell).Row {enter}
+    Send, for %variavel% = %var_ini% To Cells.SpecialCells(xlCellTypeLastCell).Row{enter}
     Send, {tab}{enter}
-    Send, +{tab}next %variavel% {enter} 
-    Send, {up}{up}{end}
+    Send, +{tab}next %variavel%
+    Send, {up}{end}
 Return
 
 ::vbawhile::
@@ -193,7 +193,9 @@ Return
 Return
 
 vba_while_sub:
+
     Sleep, 100
+
     InputBox, variavel, VBA - FOR Decrescente, Digite o nome da vari·vel,,,,,,,, x
     if ErrorLevel
         Return    
@@ -203,16 +205,14 @@ vba_while_sub:
     InputBox, var_fim, VBA - FOR Decrescente, Digite o valor final,,,,,,,, 10
     if ErrorLevel
         Return    
+
     Send, %variavel% = %var_ini% {enter}
-    Send, While %variavel% < %var_fim% {enter}
+    Send, While %variavel% < %var_fim%{enter}
     Send, {tab}{enter}
-    Send, %variavel% = %variavel% {+} 1 {enter}
-    Send, +{tab}Wend {enter}
-    Loop, 3
-    { 
-        Send, {up}
-    } 
-    Send, {end}
+    Send, %variavel% = %variavel% {+} 1{enter}
+    Send, +{tab}Wend
+    Send, {up}{up}{end}
+
 Return
 
 ::vbawhile2::
@@ -231,23 +231,25 @@ vba_while_desc_sub:
     if ErrorLevel
         Return    
     Send, %variavel% = %var_ini% {enter}
-    Send, While %variavel% > %var_fim% {enter}
+    Send, While %variavel% > %var_fim%{enter}
     Send, {tab}{enter}
-    Send, %variavel% = %variavel% {-} 1 {enter}
-    Send, +{tab}Wend {enter}
-    Loop, 3
-    { 
-        Send, {up}
-    } 
-    Send, {end}
+    Send, %variavel% = %variavel% {-} 1
+    Send, +{tab}Wend
+    Send, {up}{up}{end}
 Return
 
 ::vbawhile3::
     Gosub, vba_while_cell_sub
 Return
 
+::vbawhilecell::
+    Gosub, vba_while_cell_sub
+Return
+
 vba_while_cell_sub:
+
     Sleep, 100
+
     InputBox, variavel, VBA - WHILE, Digite o nome da vari·vel,,,,,,,, x
     if ErrorLevel
         Return    
@@ -257,16 +259,14 @@ vba_while_cell_sub:
     InputBox, var_col, VBA - WHILE, Digite a coluna,,,,,,,, 1
     if ErrorLevel
         Return    
+
     Send, %variavel% = %var_ini% {enter}
-    Send, while cells(%variavel%, %var_col%).value <> vbnullstring {enter}
+    Send, while cells(%variavel%, %var_col%).value <> vbnullstring{enter}
     Send, {tab}{enter}
-    Send, %variavel% = %variavel% {+} 1 {enter}
-    Send, +{tab}wend {enter}
-    Loop, 3 
-    { 
-        Send, {up}
-    } 
-    Send, {end}
+    Send, %variavel% = %variavel% {+} 1{enter}
+    Send, +{tab}wend
+    Send, {up}{up}{end}
+
 Return
 
 ::vbaenum::
@@ -274,14 +274,18 @@ Return
 Return
 
 vba_enum_sub:
+
     Sleep, 100
+
     InputBox, enum_name, VBA - ENUM, Digite o nome do Enumeration,,,,,,,, enum_name
     if ErrorLevel
         Return    
-    Send, Enum %enum_name% {enter}
+
+    Send, Enum %enum_name%{enter}
     Send, {enter}
-    Send, End Enum {enter}
-    Send, {up}{up}{tab}{end}
+    Send, End Enum
+    Send, {up}{end}{tab}
+
 Return
 
 ;-------------------
@@ -309,6 +313,7 @@ Return
 Return
 
 vba_msg_sub:
+
     Sleep, 100
     InputBox, texto, VBA - Msgbox, Digite o texto da mensagem,,,,,,,, mensagem
     if ErrorLevel
@@ -347,7 +352,8 @@ vba_msg_sub:
     else 
     {
         Send, MsgBox %texto%, , %titulo%
-    }    
+    }
+
 Return
 
 ::vbaifmsg::
@@ -355,17 +361,21 @@ Return
 Return
 
 vba_msg_if_sub:
+
     Sleep, 100
+
     InputBox, texto, VBA - Msgbox, Digite o texto da mensagem,,,,,,,, mensagem
     if ErrorLevel
         Return    
     InputBox, titulo, VBA - Msgbox, Digite o t√≠tulo da mensagem,,,,,,,, titulo
     if ErrorLevel
-        Return    
+        Return
+
     Send, If VBA.MsgBox(%texto%, vbQuestion {+} vbYesNo, %titulo%) = vbYes Then {enter}
     Send, {tab}{enter}
-    Send, +{tab}End If {enter}
-    Send, {up}{up}{end}
+    Send, +{tab}End If
+    Send, {up}{end}
+
 Return
 
 ::vbainput::
@@ -373,7 +383,9 @@ Return
 Return
 
 vba_input_sub:
+
     Sleep, 100
+
     InputBox, mensagem, VBA - Input, Digite a mensagem.,,,,,,,, mensagem
     if ErrorLevel
         Return
@@ -383,7 +395,9 @@ vba_input_sub:
     InputBox, variavel, VBA - Input, Digite a variavel que receber· input.,,,,,,,, variavel
     if ErrorLevel
         Return
-    Send, %variavel% = InputBox("%mensagem%", "%titulo%") {enter}
+    
+    Send, %variavel% = InputBox("%mensagem%", "%titulo%")
+
 Return
 
 ::vbainput2::
@@ -391,6 +405,7 @@ Return
 Return
 
 vba_input_sub2:
+
     Sleep, 100
     InputBox, mensagem, VBA - Input, Digite a mensagem.,,,,,,,, mensagem
     if ErrorLevel
@@ -401,7 +416,9 @@ vba_input_sub2:
     InputBox, variavel, VBA - Input, Digite a variavel que receber· input.,,,,,,,, variavel
     if ErrorLevel
         Return    
-    Send, %variavel% = VBA.InputBox("%mensagem%", "%titulo%") {enter}
+    
+    Send, %variavel% = VBA.InputBox("%mensagem%", "%titulo%")
+
 Return
 
 ;-------------------
@@ -429,12 +446,47 @@ Return
 Return
 
 vba_with_sub:
+
     Sleep, 100
+
     InputBox, var_name, VBA - Input, Infome o nome do componente with.,,,,,,,, var_name
     if ErrorLevel
-        Return    
+        Return
+
     Send, With %var_name%{enter}
     Send, {enter}
     Send, End With
     Send, {up}{up}{end}^+{left}
+
+Return
+
+; --------------------------------------------- 
+; COMMENT 
+; ---------------------------------------------
+
+::vbacomment::
+    Gosub, vba_comment_sub
+Return
+
+::vbac::
+    Gosub, vba_comment_sub
+Return
+
+vba_comment_sub:
+
+    Sleep, 100
+
+    InputBox, vba_comment, VBA - Comment, Type your comment text.,,,,,,,, comment_text
+    if ErrorLevel
+        Return    
+
+    line := StrLen(vba_comment) + 3
+
+    Send, ' %vba_comment%{enter}
+    Send, '
+    loop, %line%
+    {
+        Send, -
+    }
+
 Return
