@@ -291,6 +291,34 @@ quasar_dev_sub:
 Return
 
 
+; --------------------------------------------- 
+; DEV WATCH
+; ---------------------------------------------
+
+::qsrdw::
+    Gosub, quasar_dev_watch_sub
+Return
+
+::qsrdevw::
+    Gosub, quasar_dev_watch_sub
+Return
+
+::quasardw::
+    Gosub, quasar_dev_watch_sub
+Return
+
+::quasardevwatch::
+    Gosub, quasar_dev_watch_sub
+Return
+
+quasar_dev_watch_sub:
+
+    Sleep, 100
+    Send, quasar dev watch 
+    
+Return
+
+
 
 ; --------------------------------------------- 
 ; BUILD 
