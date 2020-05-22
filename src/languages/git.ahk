@@ -48,7 +48,7 @@ Return
 ; GIT STATUS 
 ; ---------------------------------------------
 
-::gitstatus::
+::gits::
     Gosub, git_status_sub
 Return
 
@@ -56,7 +56,7 @@ Return
     Gosub, git_status_sub
 Return
 
-::gits::
+::gitstatus::
     Gosub, git_status_sub
 Return
 
@@ -125,6 +125,28 @@ Return
 git_log_sub:
     Sleep, 150
     Send, git log
+Return
+
+
+; --------------------------------------------- 
+; GIT REF LOG 
+; ---------------------------------------------
+
+::gitrl::
+    Gosub, git_ref_log_sub
+Return
+
+::gitrefl::
+    Gosub, git_ref_log_sub
+Return
+
+::gitreflog::
+    Gosub, git_ref_log_sub
+Return
+
+git_ref_log_sub:
+    Sleep, 150
+    Send, git ref log
 Return
 
 
@@ -515,11 +537,43 @@ git_checkout_branch_sub:
 
     Sleep, 150
 
-    InputBox, sBranch, Git Checkout, Type the branch name,,,,,,,, master
+    InputBox, sBranch, Git Checkout, Type the branch name,,,,,,,, Feature/
     if ErrorLevel
         Return
 
     Send, git checkout -b %sBranch%
+
+Return
+
+; --------------------------------------------- 
+; GIT CHECKOUT - DELETED BRANCH
+; ---------------------------------------------
+
+::gitchkbd::
+    Gosub, git_checkout_delete_branch_sub
+Return
+
+::gitchkbranchd::
+    Gosub, git_checkout_delete_branch_sub
+Return
+
+::gitcheckoutbranchdeleted::
+    Gosub, git_checkout_delete_branch_sub
+Return
+
+git_checkout_delete_branch_sub:
+
+    Sleep, 150
+
+    InputBox, sBranch, Git Checkout Deleted Branch, Type the branch name,,,,,,,, branch_name
+    if ErrorLevel
+        Return
+
+    InputBox, sRef, Git Checkout Deleted Branch, Type the Ref Log,,,,,,,, ref_log
+    if ErrorLevel
+        Return
+
+    Send, git checkout -b %sBranch% %sRef%
 
 Return
 
@@ -1039,8 +1093,32 @@ Return
 git_branch_sub:
 
     Sleep, 150
+    Send, git branch
 
-    InputBox, sBranch, Git Branch, Type the new Branch Name,,,,,,,, branch_name
+Return
+
+
+; --------------------------------------------- 
+; GIT BRANCH - ADD
+; ---------------------------------------------
+
+::gitba::
+    Gosub, git_branch_add_sub
+Return
+
+::gitbrancha::
+    Gosub, git_branch_add_sub
+Return
+
+::gitbranchadd::
+    Gosub, git_branch_add_sub
+Return
+
+git_branch_add_sub:
+
+    Sleep, 150
+
+    InputBox, sBranch, Git New Branch, Type the new Branch Name,,,,,,,, Feature/
     if ErrorLevel
         Return
 
@@ -1069,7 +1147,7 @@ git_merge_branch_sub:
 
     Sleep, 150
 
-    InputBox, sBranch, Git Branch, Type the new Branch Name,,,,,,,, branch_name
+    InputBox, sBranch, Git Branch, Type the new Branch Name,,,,,,,, Feature/
     if ErrorLevel
         Return
 
