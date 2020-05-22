@@ -6,7 +6,7 @@ SendMode Input ; Recommended for new scripts due to its superior speed and relia
 SetWorkingDir %A_MyDocuments%  ;  %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ProductName      := "The Forge"
-ProductVersion   := "0.2.1"
+ProductVersion   := "0.3.0"
 ProductPublisher := "Angelo R. Pinto"
 ProductWebsite   := "https://github.com/angelorpt/The-Forge"
 autoComplete     := 1 ; DEFAULT
