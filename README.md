@@ -2,32 +2,40 @@
 
 ![The Forge](./img/thor-hammer_128x128.png)
 
-**The Forge** √© um aplicativo desenvolvido em [AutoHotkey](https://www.autohotkey.com) que tem como objetivo auxiliar desenvolvedores, com diversas ferramentas, a forjar seus softwares.
+**The Forge** … um aplicativo desenvolvido em [AutoHotkey](https://www.autohotkey.com) que tem como objetivo auxiliar desenvolvedores, com diversas ferramentas, a forjar seus softwares.
 
 <br>
 
+## Menu
+
+* [Experimente](#experimente)
+
+* [GIT Cli Commands](#git-cli-commands)
+    
+* [Quasar Cli Commands](#quasar-cli-commands)
+
+* [Copyright](#copyright)
+
 ## Experimente
 
-1. Abra seu editor c√≥digo: _VSCODE_, _ATOM_, _SUBLIME_, _NOTEPAD++_ ou qualquer outro.
+**No seu terminal ou prompt de comando:**
 
-2. <kbd>VBAIF</kbd> - Digite o comando e pressione <kbd>Espa√ßo</kbd> ou <kbd>Enter</kbd>
+1. <kbd>gitlp</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>EspaÁo</kbd>
 
-3. <kbd>DELPHICASE</kbd> - Digite o comando e informe na caixa de texto: <kbd>3</kbd>
+2. <kbd>gitlpf</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>EspaÁo</kbd>
 
-4. <kbd>GITCA</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>Espa√ßo</kbd>
-
-5. <kbd>ORAPACKAGE</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>Espa√ßo</kbd>
+3. <kbd>gitlgo</kbd> - Digite o comando e pressione <kbd>Enter</kbd> ou <kbd>EspaÁo</kbd>
 
 <br>
 
 ## Languages
 
-### GIT - COMMANDS
+### GIT Cli Commands
 
 COMMAND                        | ACTION
 -------------------------------|----------
-<kbd>gitadd</kbd>              |  `git add *`
-<kbd>gita</kbd>                |  `git add *`
+<kbd>gita</kbd>                |  `git add .`
+<kbd>gitadd</kbd>              |  `git add .`
 <kbd>gitcheckout</kbd>         |  `git checkout master`
 <kbd>gitcheck</kbd>            |  `git checkout master`
 <kbd>gitchk</kbd>              |  `git checkout master`
@@ -52,7 +60,6 @@ COMMAND                        | ACTION
 <kbd>gitel2</kbd>              |  `git config --global core.safecrlf warn`
 <kbd>gitconfigemail</kbd>      |  `git config --global user.email "user@email.com"`
 <kbd>gitemail</kbd>            |  `git config --global user.email "user@email.com"`
-<kbd>gitmail</kbd>             |  `git config --global user.email "user@email.com"`
 <kbd>gituser</kbd>             |  `git config --global user.name "user_name"`
 <kbd>gitname</kbd>             |  `git config --global user.name "user_name"`
 <kbd>gitusername</kbd>         |  `git config --global user.name "user_name"`
@@ -95,5 +102,90 @@ COMMAND                        | ACTION
 <kbd>gittd</kbd>               |  `git tag -d tag_name`
 
 <br>
+<br>
+
+### Quasar Cli Commands
+
+COMMAND                         | ACTION
+--------------------------------|----------
+<kbd>qsrn</kbd>                 |  `quasar create .`
+<kbd>qsrnew</kbd>               |  `quasar create .`
+<kbd>qsrcreate</kbd>            |  `quasar create .`
+<kbd>quasarn</kbd>              |  `quasar create .`
+<kbd>quasarnew</kbd>            |  `quasar create .`
+<kbd>quasarcreate</kbd>         |  `quasar create .`
+<kbd>quasarcreate</kbd>         |  `quasar create .`
+<kbd>qsru</kbd>                 |  `quasar upgrade`
+<kbd>qsrupg</kbd>               |  `quasar upgrade`
+<kbd>quasarup</kbd>             |  `quasar upgrade`
+<kbd>quasarupgrade</kbd>        |  `quasar upgrade`
+<kbd>qsrui</kbd>                |  `quasar upgrade --install`
+<kbd>quasarui</kbd>             |  `quasar upgrade --install`
+<kbd>qsrupgradei</kbd>          |  `quasar upgrade --install`
+<kbd>quassarupgradei</kbd>      |  `quasar upgrade --install`
+<kbd>quasarupgradeinstall</kbd> |  `quasar upgrade --install`
+<kbd>qsri</kbd>                 |  `quasar info`
+<kbd>qsrinfo</kbd>              |  `quasar info`
+<kbd>quasari</kbd>              |  `quasar info`
+<kbd>quasarinfo</kbd>           |  `quasar info`
+<kbd>qsrd</kbd>                 |  `quasar dev -m [spa]`
+<kbd>qsrdev</kbd>               |  `quasar dev -m [spa]`
+<kbd>quasard</kbd>              |  `quasar dev -m [spa]`
+<kbd>quasardev</kbd>            |  `quasar dev -m [spa]`
+<kbd>qsrdw</kbd>                |  `quasar dev watch`
+<kbd>qsrdevw</kbd>              |  `quasar dev watch`
+<kbd>quasardw</kbd>             |  `quasar dev watch`
+<kbd>quasardevwatch</kbd>       |  `quasar dev watch`
+<kbd>qsrb</kbd>                 |  `quasar build -m [spa]`
+<kbd>qsrbuild</kbd>             |  `quasar build -m [spa]`
+<kbd>quasarb</kbd>              |  `quasar build -m [spa]`
+<kbd>quasarbuild</kbd>          |  `quasar build -m [spa]`
+<kbd>qsrcl</kbd>                |  `quasar clean`
+<kbd>qsrclean</kbd>             |  `quasar clean`
+<kbd>quasarcl</kbd>             |  `quasar clean`
+<kbd>quasarclean</kbd>          |  `quasar clean`
+<kbd>qsrp</kbd>                 |  `quasar new page page_name`
+<kbd>qsrpage</kbd>              |  `quasar new page page_name`
+<kbd>quasarp</kbd>              |  `quasar new page page_name`
+<kbd>quasarpage</kbd>           |  `quasar new page page_name`
+<kbd>qsrl</kbd>                 |  `quasar new layout layout_name`
+<kbd>qsrlayout</kbd>            |  `quasar new layout layout_name`
+<kbd>quasarl</kbd>              |  `quasar new layout layout_name`
+<kbd>quasarlayout</kbd>         |  `quasar new layout layout_name`
+<kbd>qsrc</kbd>                 |  `quasar new component component_name`
+<kbd>qsrcomponent</kbd>         |  `quasar new component component_name`
+<kbd>quasarc</kbd>              |  `quasar new component component_name`
+<kbd>quasarcomponent</kbd>      |  `quasar new component component_name`
+<kbd>qsrbt</kbd>                |  `quasar new boot boot_name`
+<kbd>qsrboot</kbd>              |  `quasar new boot boot_name`
+<kbd>quasarbt</kbd>             |  `quasar new boot boot_name`
+<kbd>quasarboot</kbd>           |  `quasar new boot boot_name`
+<kbd>qsrs</kbd>                 |  `quasar new store store_name`
+<kbd>qsrstore</kbd>             |  `quasar new store store_name`
+<kbd>quasars</kbd>              |  `quasar new store store_name`
+<kbd>quasarsore</kbd>           |  `quasar new store store_name`
+<kbd>qsrm</kbd>                 |  `quasar mode`
+<kbd>qsrmode</kbd>              |  `quasar mode`
+<kbd>quasarm</kbd>              |  `quasar mode`
+<kbd>quasarmode</kbd>           |  `quasar mode`
+<kbd>qsrma</kbd>                |  `quasar mode add [cordova]`
+<kbd>qsrmodea</kbd>             |  `quasar mode add [cordova]`
+<kbd>quasarma</kbd>             |  `quasar mode add [cordova]`
+<kbd>quasarmodeadd</kbd>        |  `quasar mode add [cordova]`
+<kbd>qsrmr</kbd>                |  `quasar mode remove [cordova]`
+<kbd>qsrmoder</kbd>             |  `quasar mode remove [cordova]`
+<kbd>quasarmr</kbd>             |  `quasar mode remove [cordova]`
+<kbd>quasarmoderemove</kbd>     |  `quasar mode remove [cordova]`
+<kbd>qsrds</kbd>                |  `quasar describe [component_name]/[directive_name]/[plugin_name]`
+<kbd>qsrdescribe</kbd>          |  `quasar describe [component_name]/[directive_name]/[plugin_name]`
+<kbd>qsrdesc</kbd>              |  `quasar describe [component_name]/[directive_name]/[plugin_name]`
+<kbd>quasards</kbd>             |  `quasar describe [component_name]/[directive_name]/[plugin_name]`
+<kbd>quasardesc</kbd>           |  `quasar describe [component_name]/[directive_name]/[plugin_name]`
+<kbd>quasardescribe</kbd>       |  `quasar describe [component_name]/[directive_name]/[plugin_name]`
+
+<br>
+<br>
+
+### Copyright
 
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

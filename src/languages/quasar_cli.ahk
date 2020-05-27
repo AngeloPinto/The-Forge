@@ -56,19 +56,15 @@ Return
     Gosub, quasar_upgrade_sub
 Return
 
-::qsrupd::
+::qsrupg::
     Gosub, quasar_upgrade_sub
 Return
 
-::qsrupdate::
+::quasarup::
     Gosub, quasar_upgrade_sub
 Return
 
-::quasarupd::
-    Gosub, quasar_upgrade_sub
-Return
-
-::quasarupdate::
+::quasarupgrade::
     Gosub, quasar_upgrade_sub
 Return
 
@@ -89,11 +85,11 @@ Return
     Gosub, quasar_upgrade_install_sub
 Return
 
-::qsrupdatei::
+::qsrupgradei::
     Gosub, quasar_upgrade_install_sub
 Return
 
-::quasarupdatei::
+::quassarupgradei::
     Gosub, quasar_upgrade_install_sub
 Return
 
@@ -101,7 +97,7 @@ Return
     Gosub, quasar_upgrade_install_sub
 Return
 
-::quasarupdateinstall::
+::quasarupgradeinstall::
     Gosub, quasar_upgrade_install_sub
 Return
 
@@ -902,7 +898,7 @@ Return
     Gosub, quasar_describe_sub
 Return
 
-::quasardes::
+::quasardesc::
     Gosub, quasar_describe_sub
 Return
 
@@ -914,7 +910,7 @@ quasar_describe_sub:
 
     Sleep, 100
 
-    InputBox, sText, Quasar Describe, Describes a component API for project's Quasar version being used,,,,,,,, <component/directive/plugin>
+    InputBox, sText, Quasar Describe, Describes a component API for project's Quasar version being used,,,,,,,, [component_name]/[directive_name]/[plugin_name]
     if ErrorLevel
         Return
 
