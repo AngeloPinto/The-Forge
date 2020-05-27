@@ -1151,7 +1151,7 @@ git_merge_branch_sub:
     if ErrorLevel
         Return
 
-    Send, git branch -d %sBranch%
+    Send, git merge %sBranch%
 
 Return
 
